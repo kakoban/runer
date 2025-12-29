@@ -24,6 +24,7 @@ export const generateStartupLogs = async (project: Project): Promise<string[]> =
       config: {
         systemInstruction: getSystemPrompt(project),
         maxOutputTokens: 200,
+        thinkingConfig: { thinkingBudget: 0 },
       }
     });
 
@@ -49,6 +50,7 @@ export const generateRuntimeLog = async (project: Project, context: string): Pro
             config: {
               systemInstruction: "Keep it brief. One line only.",
               maxOutputTokens: 50,
+              thinkingConfig: { thinkingBudget: 0 },
             }
           });
           return response.text?.trim() || `[INFO] Request processed /api/v1/status 200 OK`;
