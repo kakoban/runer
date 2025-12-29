@@ -1,0 +1,5 @@
+{
+  "name": "ProcessDock",
+  "description": "A visual process manager dashboard to organize, configure, and simulate running backend and frontend local development servers without touching the command line. Features port conflict detection and configuration persistence.",
+  "requestFramePermissions": []
+}
